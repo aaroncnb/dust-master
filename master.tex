@@ -1,0 +1,141 @@
+ \documentclass[11pt,a4paper,twoside]{report}
+
+
+%%%%% preamble %%%%%
+
+%%% use package %%%
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{subfigure}
+\usepackage{subfig}
+\usepackage{natbib, aas_macros}
+\citestyle{aa}
+\usepackage{setspace}
+\usepackage{times}
+%\usepackage[dvipdfmx]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{gensymb}
+%\usepackage{zxjatype}
+%\usepackage[ipa]{zxjafont}
+\usepackage{CJKutf8}
+%\usepackage{xeCJK}
+%\usepackage{pdftex}
+
+
+%%% Number equations according to section %%%
+\numberwithin{equation}{section}
+
+
+
+%%% text size %%%
+\setlength{\topmargin}{10mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\textheight}{262mm}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}
+\setlength{\oddsidemargin}{-1in} %  set real left margin 0pt
+\setlength{\evensidemargin}{-1in} % do
+\addtolength{\oddsidemargin}{25mm} % odd page 25mm left margin
+\addtolength{\evensidemargin}{15mm}% even page 15mm left margin
+\setlength{\textwidth}{170mm}
+%\setlength{\leftmargin}{-1 in}
+
+\pagestyle{fancy}
+\lhead[\it \scriptsize \leftmark]{}
+\chead[]{}
+\rhead[]{\it \scriptsize \rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+
+
+\renewcommand{\baselinestretch}{1.}
+\doublespacing
+
+\renewcommand{\bibname}{References}
+
+
+%%% title information %%%
+\title{
+  \Large{\bf Master's Course Thesis}\\[1.5cm]
+  \LARGE{\bf AKARI and Spinning Dust}\\
+  \LARGE{\bf A look at microwave dust emission via the Infrared}\\[2cm]
+\begin{CJK}{UTF8}{min}\LARGE{\bf あかりで探るスピニングダスト：\\
+赤外で見たマイクロ波ダスト放射}\end{CJK} \\
+ %  \\
+%  \includegraphics[width=60mm]{EPS/AKARIchan3.png}
+}
+
+\date{\Large{\bf March 13, 2015}}
+
+
+\author{
+  \Large{\bf 35-136359
+  Aaron C. N. Bell}\\
+ \begin{CJK}{UTF8}{min}\LARGE{ベル・アーロン・クリストファー}
+  \end{CJK}\\[1cm]
+  \Large{\bf Department of Astronomy}\\
+  \Large{\bf Graduate School of Science,
+  The University of Tokyo}\\
+  \begin{CJK}{UTF8}{min}\LARGE{東京大学大学院理学系研究科}
+  \end{CJK}\\
+}
+
+
+
+
+%%%%% main page %%%%%
+\begin{document}
+
+%%% make title %%%
+\maketitle
+\thispagestyle{empty}\mbox{}\newpage
+
+\pagenumbering{roman}
+
+%%% abstract %%%
+\include{abstract}
+%\include{jabstract}
+
+%%% table of contents %%%
+\include{tableofcontents}
+\listoffigures
+%%% main chapters %%%
+% Empty pages are inserted to make each title page
+% come to the right-hand side (odd page) of the book.
+
+%%% page numbering %%%
+\pagenumbering{arabic}
+
+\include{chap1_introduction}
+\include{chap2_data}
+\include{chap3_analysis}
+\include{chap4_discussion}
+\include{chap5_summary}
+
+%%% appendix %%%
+\appendix
+\include{app_appendixA}
+%\thispagestyle{empty}\mbox{}\newpage
+\include{app_appendixB}
+%\thispagestyle{empty}\mbox{}\newpage
+ 
+%%% acknowledgment %%%
+\singlespacing
+\include{acknowledgements}
+\thispagestyle{empty}\mbox{}\newpage
+\doublespacing
+
+%%% bibliography %%%
+{
+\include{chap_bib}
+}
+
+%\end{spacing}
+
+\end{document}
